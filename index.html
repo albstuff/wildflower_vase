@@ -1,280 +1,803 @@
 <!DOCTYPE html>
-
 <html lang="zh-Hant">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>超商取件資料</title>
+<title>超商取件資料｜野花器</title>
 
 <style>
+
+/* =========================
+   基本設定
+========================= */
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, "Microsoft JhengHei", sans-serif;
-    background: #f3f4f2;
     margin: 0;
-    padding: 30px 15px;
-    color: #333;
+    background: #050607;
+    color: #c9c7c2;
+
+    font-family:
+        "Noto Serif TC",
+        "Microsoft JhengHei",
+        serif;
+
+    line-height: 1.8;
 }
 
+
+/* =========================
+   整體容器
+========================= */
+
 .container {
-    max-width: 650px;
+    width: min(900px, calc(100% - 40px));
     margin: auto;
 }
 
-/* 標題 */
+
+/* =========================
+   頁首
+========================= */
 
 header {
     text-align: center;
-    margin-bottom: 35px;
+    padding: 55px 0 35px;
+}
+
+.brand {
+
+    color: #d8ae45;
+
+    font-size: 18px;
+
+    letter-spacing: 10px;
+
+    margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+
+    margin: 0;
+
+    color: #d8ae45;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    letter-spacing: 5px;
 }
 
-header p {
-    color: #666;
-    line-height: 1.7;
+.subtitle {
+
+    margin-top: 15px;
+
+    color: #8d8b85;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
 }
+
+
+/* =========================
+   分隔線
+========================= */
+
+.line {
+
+    height: 1px;
+
+    background: #292927;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   流程
+========================= */
+
+.steps {
+
+    padding: 45px 0;
+}
+
 
 /* 每個步驟 */
 
 .step {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #292927;
 }
+
+
+/* 步驟標題 */
 
 .step-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
 }
+
 
 .step-number {
-    display: inline-block;
-    background: #333;
-    color: white;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    border-radius: 50%;
-    margin-right: 8px;
+
+    color: #d8ae45;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
 }
 
-/* 超商按鈕 */
+
+.step-title h2 {
+
+    margin: 0;
+
+    color: #d8ae45;
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+}
+
+
+/* 說明文字 */
+
+.description {
+
+    color: #aaa7a0;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   超商查詢按鈕
+========================= */
 
 .store-links {
+
     display: grid;
-    gap: 12px;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
 }
+
 
 .store-links a {
+
     display: block;
+
+    padding: 25px 20px;
+
     text-align: center;
-    padding: 16px;
-    border-radius: 10px;
+
     text-decoration: none;
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
+
+    color: #d8ae45;
+
+    border: 1px solid #514b3c;
+
+    transition: 0.25s;
 }
 
-.family {
-    background: #008c95;
-}
-
-.seven {
-    background: #d94b3d;
-}
 
 .store-links a:hover {
-    opacity: 0.85;
+
+    background: #d8ae45;
+
+    color: #050607;
 }
 
-/* 表單 */
+
+.store-name {
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+}
+
+
+.store-small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   第二步提示
+========================= */
+
+.info-list {
+
+    border-left: 1px solid #514b3c;
+
+    padding-left: 25px;
+
+    color: #aaa7a0;
+}
+
+
+.info-list div {
+
+    margin: 10px 0;
+}
+
+
+.info-list strong {
+
+    color: #d8ae45;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   表單
+========================= */
+
+.form-group {
+
+    margin-bottom: 25px;
+}
+
 
 label {
+
     display: block;
-    margin-top: 15px;
-    margin-bottom: 6px;
-    font-weight: bold;
+
+    color: #d8ae45;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
 }
+
 
 input,
 select {
+
     width: 100%;
-    padding: 13px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+
+    background: transparent;
+
+    color: #ddd;
+
+    border: none;
+
+    border-bottom: 1px solid #514b3c;
+
+    padding: 12px 5px;
+
     font-size: 16px;
+
+    outline: none;
+
+    font-family: inherit;
 }
 
-/* 提醒 */
 
-.notice {
-    background: #fff7df;
-    padding: 14px;
-    border-radius: 8px;
-    margin-top: 15px;
-    line-height: 1.7;
-    font-size: 15px;
+input:focus,
+select:focus {
+
+    border-bottom: 1px solid #d8ae45;
 }
 
-/* 複製按鈕 */
+
+/* 下拉選單 */
+
+select option {
+
+    background: #111;
+
+    color: #ddd;
+}
+
+
+/* placeholder */
+
+input::placeholder {
+
+    color: #555;
+}
+
+
+/* =========================
+   複製按鈕
+========================= */
 
 .copy-button {
+
     width: 100%;
-    border: none;
-    padding: 16px;
+
     margin-top: 20px;
-    background: #333;
-    color: white;
-    font-size: 17px;
-    border-radius: 10px;
+
+    padding: 18px;
+
+    background: transparent;
+
+    border: 1px solid #d8ae45;
+
+    color: #d8ae45;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
     cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.25s;
 }
 
+
 .copy-button:hover {
-    opacity: 0.85;
+
+    background: #d8ae45;
+
+    color: #050607;
+}
+
+
+/* =========================
+   底部
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 35px 0 55px;
+
+    color: #555;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: min(100% - 30px, 900px);
+    }
+
+
+    header {
+
+        padding: 40px 0 30px;
+    }
+
+
+    h1 {
+
+        font-size: 25px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .brand {
+
+        letter-spacing: 6px;
+    }
+
+
+    .store-links {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .step {
+
+        padding: 30px 0;
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
+
+<!-- =========================
+     頁首
+========================= -->
+
 <header>
 
-<h1>超商取件資料</h1>
+    <div class="brand">
+        WILDFLOWER VASE
+    </div>
 
-<p>
-請依照以下步驟查詢您方便取件的門市，<br>
-並將資料整理後回傳給我。
-</p>
+    <h1>超商取件資料</h1>
+
+    <div class="subtitle">
+        查詢門市　・　記下店號　・　回傳資料
+    </div>
 
 </header>
 
+
+<div class="line"></div>
+
+
+
+<!-- =========================
+     流程開始
+========================= -->
+
+<div class="steps">
+
+
 <!-- STEP 1 -->
 
-<div class="step">
+<section class="step">
 
-<div class="step-title">
-<span class="step-number">1</span>
-查詢門市
-</div>
+    <div class="step-title">
 
-<p>請選擇您方便取件的超商：</p>
+        <div class="step-number">
+            01
+        </div>
 
-<div class="store-links">
+        <h2>查詢門市</h2>
 
-<a class="family"
-href="https://www.family.com.tw/Marketing/zh/Map"
-target="_blank">
+    </div>
 
-全家便利商店<br>
-查詢門市與店號
 
-</a>
+    <div class="description">
 
-<a class="seven"
-href="https://emap.pcsc.com.tw/ecmap/default.aspx"
-target="_blank">
+        請選擇您方便取件的超商，
+        進入官方網站查詢附近的門市。
 
-7-ELEVEN<br>
-查詢門市與店號
+    </div>
 
-</a>
 
-</div>
+    <div class="store-links">
 
-</div>
+
+        <!-- 全家 -->
+
+        <a
+        href="https://www.family.com.tw/Marketing/zh/Map"
+        target="_blank">
+
+            <span class="store-name">
+                全家便利商店
+            </span>
+
+            <span class="store-small">
+                查詢門市與店號 →
+            </span>
+
+        </a>
+
+
+
+        <!-- 7-11 -->
+
+        <a
+        href="https://emap.pcsc.com.tw/ecmap/default.aspx"
+        target="_blank">
+
+            <span class="store-name">
+                7-ELEVEN
+            </span>
+
+            <span class="store-small">
+                查詢門市與店號 →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
 
 <!-- STEP 2 -->
 
-<div class="step">
+<section class="step">
 
-<div class="step-title">
-<span class="step-number">2</span>
-記下店號
-</div>
 
-<p>
-查詢到方便取件的門市後，請記下：
-</p>
+    <div class="step-title">
 
-<div class="notice">
+        <div class="step-number">
+            02
+        </div>
 
-🏪 超商名稱<br>
-📍 門市名稱<br>
-🔢 <strong>門市店號</strong>
+        <h2>記下店號</h2>
 
-<br><br>
+    </div>
 
-請特別確認您有找到「店號」，不要只提供門市名稱喔！
 
-</div>
+    <div class="description">
 
-</div>
+        找到您方便取件的門市後，
+        請記下以下資訊。
+
+    </div>
+
+
+    <div class="info-list">
+
+        <div>
+            <strong>超商名稱</strong>
+        </div>
+
+        <div>
+            <strong>門市名稱</strong>
+        </div>
+
+        <div>
+            <strong>門市店號</strong>
+        </div>
+
+    </div>
+
+
+    <div class="description" style="margin-top:25px;">
+
+        ※ 請特別確認「門市店號」，
+        不要只提供門市名稱。
+
+    </div>
+
+
+</section>
+
+
 
 <!-- STEP 3 -->
 
-<div class="step">
+<section class="step">
 
-<div class="step-title">
-<span class="step-number">3</span>
-填寫並回傳資料
+
+    <div class="step-title">
+
+        <div class="step-number">
+            03
+        </div>
+
+        <h2>填寫並回傳資料</h2>
+
+    </div>
+
+
+    <div class="description">
+
+        填寫完成後，按下「複製資料」，
+        再回到訊息中貼上傳送給我即可。
+
+    </div>
+
+
+
+    <!-- 姓名 -->
+
+    <div class="form-group">
+
+        <label>
+            收件人姓名
+        </label>
+
+        <input
+        type="text"
+        id="name"
+        placeholder="請輸入姓名">
+
+    </div>
+
+
+
+    <!-- 電話 -->
+
+    <div class="form-group">
+
+        <label>
+            聯絡電話
+        </label>
+
+        <input
+        type="tel"
+        id="phone"
+        placeholder="請輸入電話">
+
+    </div>
+
+
+
+    <!-- 超商 -->
+
+    <div class="form-group">
+
+        <label>
+            超商
+        </label>
+
+        <select id="store">
+
+            <option value="">
+                請選擇超商
+            </option>
+
+            <option value="全家便利商店">
+                全家便利商店
+            </option>
+
+            <option value="7-ELEVEN">
+                7-ELEVEN
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <!-- 門市名稱 -->
+
+    <div class="form-group">
+
+        <label>
+            門市名稱
+        </label>
+
+        <input
+        type="text"
+        id="storeName"
+        placeholder="例如：○○門市">
+
+    </div>
+
+
+
+    <!-- 店號 -->
+
+    <div class="form-group">
+
+        <label>
+            門市店號
+        </label>
+
+        <input
+        type="text"
+        id="storeNumber"
+        placeholder="請輸入門市店號">
+
+    </div>
+
+
+
+    <!-- 複製 -->
+
+    <button
+    class="copy-button"
+    onclick="copyInfo()">
+
+        複製資料
+
+    </button>
+
+
+</section>
+
+
 </div>
 
-<label>收件人姓名</label> <input type="text" id="name" placeholder="請輸入收件人姓名">
 
-<label>聯絡電話</label> <input type="tel" id="phone" placeholder="請輸入聯絡電話">
 
-<label>超商</label>
+<div class="line"></div>
 
-<select id="store">
 
-<option value="">請選擇超商</option>
-<option value="全家便利商店">全家便利商店</option>
-<option value="7-ELEVEN">7-ELEVEN</option>
 
-</select>
+<footer>
 
-<label>門市名稱</label> <input type="text" id="storeName" placeholder="例如：○○門市">
+    WILDFLOWER VASE
 
-<label>門市店號</label> <input type="text" id="storeNumber" placeholder="請輸入門市店號">
+</footer>
 
-<button class="copy-button" onclick="copyInfo()">
-
-複製資料，回傳給我
-
-</button>
 
 </div>
 
-</div>
+
+
+<!-- =========================
+     JavaScript
+========================= -->
 
 <script>
 
+
 function copyInfo() {
 
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const store = document.getElementById("store").value;
-    const storeName = document.getElementById("storeName").value;
-    const storeNumber = document.getElementById("storeNumber").value;
+
+    const name =
+        document.getElementById("name").value.trim();
+
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+
+    const store =
+        document.getElementById("store").value;
+
+
+    const storeName =
+        document.getElementById("storeName").value.trim();
+
+
+    const storeNumber =
+        document.getElementById("storeNumber").value.trim();
+
+
+
+    /* 檢查是否全部填寫 */
+
+    if (
+        !name ||
+        !phone ||
+        !store ||
+        !storeName ||
+        !storeNumber
+    ) {
+
+        alert("請先完成所有資料。");
+
+        return;
+    }
+
+
+
+    /* 要複製的內容 */
 
     const text =
 
@@ -289,13 +812,36 @@ function copyInfo() {
 門市店號：${storeNumber}`;
 
 
-    navigator.clipboard.writeText(text);
 
-    alert("資料已複製！請回到訊息中貼上並傳送給我。");
+    /* 複製 */
+
+    navigator.clipboard.writeText(text)
+
+
+    .then(() => {
+
+        alert(
+            "資料已複製！\n\n請回到與我的訊息中貼上並傳送即可。"
+        );
+
+    })
+
+
+    .catch(() => {
+
+        alert(
+            "複製失敗，請手動選取資料。"
+        );
+
+    });
+
 
 }
 
+
 </script>
 
+
 </body>
+
 </html>
