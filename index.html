@@ -1,41 +1,301 @@
-<p style="text-align: center;letter-spacing:1px;">
-<div class="mycont">
-<span class="mylist">成分：</span>石蠟、綿線、雲母粉。<br>
-<span class="mylist">尺寸：</span>78 x 78 x 230 (mm)，誤差值 ±3 (mm)。<br>
-<span class="mylist">重量：</span>1100 ± 30 (g)
+<!DOCTYPE html>
 
-<hr class="myhr">
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<span class="mylist">大方柱蠟燭：</span>
-<br>燭火透過有著各式紋路的蠟片透出，為空間增添溫暖又明亮的氣氛。
-<br>大型的柱狀蠟燭較不怕風，燃燒時間也久，非常適合有點蠟燭習慣的朋友。
+<title>超商取件資料</title>
 
-<hr class="myhr">
+<style>
 
-<span class="mylist">燃燒時間：</span>
-<br>正常使用下約可燃燒超過 200 小時。由於燃燒時燭蕊會自然捲曲，需定時查看以免燭火歪斜，導致融化外牆讓蠟液流出。
+* {
+    box-sizing: border-box;
+}
 
-<hr class="myhr">
+body {
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    background: #f3f4f2;
+    margin: 0;
+    padding: 30px 15px;
+    color: #333;
+}
 
-<span class="mylist">如果快燒完了：</span>
-<br>方柱蠟燭燃燒到後期就像燈罩一樣，在蠟燭快燒完前，您可以不要再繼續燃燒大方柱原本的燭蕊，改而另外置入市面上的小圓柱蠟燭，讓大方柱成為一個美麗的蠟製燈罩。
+.container {
+    max-width: 650px;
+    margin: auto;
+}
 
-<hr class="myhr">
+/* 標題 */
 
-<span class="mylist">關於香味：</span><br>我們認為相較於香味，蠟燭燃燒時的型態與光影變化更是不可取代。所以我們決定讓蠟燭更單純，將重點放在溫度的傳遞。<br>若是希望房內能有香氛氣味，可以參考我們販售的擴香儀，其使用物理式將精油霧化，不加水、不加熱，經濟實惠且更具變化性。<br><a href="http://albstuff.com/products/ard" target="_blank">擴香儀連結請按此<img src="https://cdn.store-assets.com/s/232464/f/1017650.png" alt="開新視窗"></a>
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
 
-<hr class="myhr">
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
 
-<span class="mylist">大方柱蠟燭燃燒注意事項：</span>
-<ul>
-<li>為了維持蠟燭的形狀完好，建議每次點燃請至少燃燒一小時以上，蠟池才會漂亮。</li>
-<li>熄滅蠟燭時，請使用耐燃器具將燭芯由根部推倒，讓燭芯浸到蠟液中，待燭火熄滅後再扶回原位，一來可避免黑煙產生，二來也可避免棉芯灰化。</li>
-<li>燃燒時需注意燭芯是否有置中，若歪掉請調整燭火位置，避免蠟液流出。</li>
-<li>請將蠟燭安置在穩定的平台上，使用時或剛使用後請勿移動。</li>
-<li>燃燒時請遠離易燃物 (特別注意窗簾)。</li>
-<li>燃燒時，請置於幼兒或寵物不可及之處。</li>
-<li>蠟燭離開視線範圍內時，請先熄滅。</li>
-<li>大型蠟燭是需要照顧的，如在使用時有遇到任何問題，請儘管與我聯絡，很樂意為您解答。</li>
-</ul>
+header p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* 每個步驟 */
+
+.step {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.step-number {
+    display: inline-block;
+    background: #333;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* 超商按鈕 */
+
+.store-links {
+    display: grid;
+    gap: 12px;
+}
+
+.store-links a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.family {
+    background: #008c95;
+}
+
+.seven {
+    background: #d94b3d;
+}
+
+.store-links a:hover {
+    opacity: 0.85;
+}
+
+/* 表單 */
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* 提醒 */
+
+.notice {
+    background: #fff7df;
+    padding: 14px;
+    border-radius: 8px;
+    margin-top: 15px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* 複製按鈕 */
+
+.copy-button {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    margin-top: 20px;
+    background: #333;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    opacity: 0.85;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>超商取件資料</h1>
+
+<p>
+請依照以下步驟查詢您方便取件的門市，<br>
+並將資料整理後回傳給我。
+</p>
+
+</header>
+
+<!-- STEP 1 -->
+
+<div class="step">
+
+<div class="step-title">
+<span class="step-number">1</span>
+查詢門市
 </div>
-</P>
+
+<p>請選擇您方便取件的超商：</p>
+
+<div class="store-links">
+
+<a class="family"
+href="https://www.family.com.tw/Marketing/zh/Map"
+target="_blank">
+
+全家便利商店<br>
+查詢門市與店號
+
+</a>
+
+<a class="seven"
+href="https://emap.pcsc.com.tw/ecmap/default.aspx"
+target="_blank">
+
+7-ELEVEN<br>
+查詢門市與店號
+
+</a>
+
+</div>
+
+</div>
+
+<!-- STEP 2 -->
+
+<div class="step">
+
+<div class="step-title">
+<span class="step-number">2</span>
+記下店號
+</div>
+
+<p>
+查詢到方便取件的門市後，請記下：
+</p>
+
+<div class="notice">
+
+🏪 超商名稱<br>
+📍 門市名稱<br>
+🔢 <strong>門市店號</strong>
+
+<br><br>
+
+請特別確認您有找到「店號」，不要只提供門市名稱喔！
+
+</div>
+
+</div>
+
+<!-- STEP 3 -->
+
+<div class="step">
+
+<div class="step-title">
+<span class="step-number">3</span>
+填寫並回傳資料
+</div>
+
+<label>收件人姓名</label> <input type="text" id="name" placeholder="請輸入收件人姓名">
+
+<label>聯絡電話</label> <input type="tel" id="phone" placeholder="請輸入聯絡電話">
+
+<label>超商</label>
+
+<select id="store">
+
+<option value="">請選擇超商</option>
+<option value="全家便利商店">全家便利商店</option>
+<option value="7-ELEVEN">7-ELEVEN</option>
+
+</select>
+
+<label>門市名稱</label> <input type="text" id="storeName" placeholder="例如：○○門市">
+
+<label>門市店號</label> <input type="text" id="storeNumber" placeholder="請輸入門市店號">
+
+<button class="copy-button" onclick="copyInfo()">
+
+複製資料，回傳給我
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function copyInfo() {
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const store = document.getElementById("store").value;
+    const storeName = document.getElementById("storeName").value;
+    const storeNumber = document.getElementById("storeNumber").value;
+
+    const text =
+
+`收件人姓名：${name}
+
+聯絡電話：${phone}
+
+超商：${store}
+
+門市名稱：${storeName}
+
+門市店號：${storeNumber}`;
+
+
+    navigator.clipboard.writeText(text);
+
+    alert("資料已複製！請回到訊息中貼上並傳送給我。");
+
+}
+
+</script>
+
+</body>
+</html>
