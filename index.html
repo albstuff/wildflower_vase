@@ -6,296 +6,298 @@
 	<title>ALBSTUFF 野花器購買資料</title>
 	<style>
 
-	/* === 基本設定 === */
+	   /* === 基本設定 === */
 
-	* {
-	   box-sizing: border-box;
-	}
+	   * {
+	      box-sizing: border-box;
+	   }
 
-	body {
-	   margin: 0;
-	   background: #050607;
-	   color: #c9c7c2;
+	   body {
+	      margin: 0;
+	      background: #050607;
+	      color: #c9c7c2;
 
-	   font-family:
-	       "Noto Serif TC",
-	       "Microsoft JhengHei",
-	       serif;
+	      font-family:
+	          "Noto Serif TC",
+	          "Microsoft JhengHei",
+	          serif;
 
-	   line-height: 1.8;
-	}
+	      line-height: 1.8;
+	   }
 
 
-	/* === 整體容器 === */
-
-	.container {
-	   width: min(720px, calc(100% - 40px));
-	   margin: auto;
-	}
-
-
-	/* === 頁首 === */
-
-	header {
-	   text-align: center;
-	   padding: 60px 0 35px;
-	}
-
-	.brand {
-	   color: #d8ae45;
-	   font-size: 18px;
-	   letter-spacing: 10px;
-	   margin-bottom: 15px;
-	}
-
-	h1 {
-	   margin: 0;
-	   color: #d8ae45;
-	   font-size: 32px;
-	   font-weight: normal;
-	   letter-spacing: 5px;
-	}
-
-	.subtitle {
-	   color: #8d8b85;
-	   font-size: 14px;
-	   letter-spacing: 2px;
-	   margin-top: 8px;
-	}
-
-
-	/* === 分隔線 === */
-
-	.line {
-	   height: 1px;
-	   background: #292927;
-	}
-
-
-	/* === 主要區塊 === */
-
-	.section {
-	   padding: 40px 0;
-	   border-bottom: 1px solid #292927;
-	}
-
-
-	/* === 標題 === */
-
-	h2 {
-	   margin: 0 0 18px;
-	   color: #d8ae45;
-	   font-size: 22px;
-	   font-weight: normal;
-	   letter-spacing: 2px;
-	}
-
-
-	/* === 說明文字 === */
-
-	.description {
-	   color: #aaaaaa;
-	   font-size: 16px;
-	   margin-bottom: 24px;
-	}
-
-
-	/* === 超商查詢按鈕 === */
-
-	.store-links {
-	   display: grid;
-	   grid-template-columns: 1fr 1fr;
-	   gap: 20px;
-	}
-
-	.store-links a {
-	   display: block;
-	   padding: 20px;
-
-	   text-align: center;
-	   text-decoration: none;
-
-	   color: #d8ae45;
-	   border: 1px solid #d8ae45;
-
-	   transition: 0.25s;
-	}
-
-	.store-links a:hover {
-	   background: #d8ae45;
-	   color: #050607;
-	}
-
-	.store-name {
-	   font-size: 18px;
-	   letter-spacing: 3px;
-	}
-
-	.store-small {
-	   display: block;
-	   margin-top: 3px;
-	   font-size: 12px;
-	   letter-spacing: 2px;
-	   opacity: 0.8;
-	}
-
-
-	/* === 查詢前需記下的資訊 === */
-
-	.info-list {
-	   border-left: 2px solid #514b3c;
-	   padding-left: 20px;
-	   color: #aaa7a0;
-	   margin-bottom: 24px;
-	}
-
-	.info-list div {
-	   margin: 8px 0;
-	}
-
-	.info-list strong {
-	   color: #d8ae45;
-	   font-weight: normal;
-	}
-
-
-	/* === 表單 === */
-
-	.form-group {
-	   margin-bottom: 25px;
-	}
-
-	label {
-	   display: block;
-	   color: #d8ae45;
-	   font-size: 16px;
-	   letter-spacing: 1px;
-	   margin-bottom: 8px;
-	}
-
-	input,
-	select {
-	   width: 100%;
-
-	   background: transparent;
-	   color: #ddd;
-
-	   border: none;
-	   border-bottom: 1px solid #514b3c;
-
-	   padding: 12px 5px;
-
-	   font-size: 16px;
-	   outline: none;
-	   font-family: inherit;
-	}
-
-
-	/* === Chrome 自動填寫 === */
-
-	input:-webkit-autofill,
-	input:-webkit-autofill:hover,
-	input:-webkit-autofill:focus,
-	input:-webkit-autofill:active {
-	   -webkit-box-shadow: 0 0 0 1000px #050607 inset !important;
-	   -webkit-text-fill-color: #ddd !important;
-	   caret-color: #ddd;
-	}
-
-
-	/* === Focus === */
-
-	input:focus,
-	select:focus {
-	   border-bottom: 1px solid #d8ae45;
-	}
-
-
-	/* === 下拉選單 === */
-
-	select option {
-	   background: #111;
-	   color: #ddd;
-	}
-
-
-	/* === Placeholder === */
-
-	input::placeholder {
-	   color: #555;
-	}
-
-
-	/* === 複製按鈕 === */
-
-	.copy-button {
-	   width: 100%;
-	   margin-top: 15px;
-	   margin-bottom: 15px;
-	   padding: 18px;
-
-	   background: transparent;
-
-	   border: 1px solid #d8ae45;
-	   color: #d8ae45;
-
-	   font-size: 16px;
-	   letter-spacing: 2px;
-
-	   cursor: pointer;
-	   font-family: inherit;
-
-	   transition: 0.25s;
-	}
-
-	.copy-button:hover {
-	   background: #d8ae45;
-	   color: #050607;
-	}
-
-
-	/* === 底部 === */
-
-	footer {
-	   text-align: center;
-	   padding: 35px 0 55px;
-
-	   color: #555;
-	   font-size: 12px;
-	   letter-spacing: 2px;
-	}
-
-
-	/* === 手機版 === */
-
-	@media (max-width: 600px) {
+	   /* === 整體容器 === */
 
 	   .container {
-	       width: calc(100% - 30px);
+	      width: min(720px, calc(100% - 40px));
+	      margin: auto;
 	   }
+
+
+	   /* === 頁首 === */
 
 	   header {
-	       padding: 40px 0 30px;
-	   }
-
-	   h1 {
-	       font-size: 25px;
-	       letter-spacing: 3px;
+	      text-align: center;
+	      padding: 60px 0 35px;
 	   }
 
 	   .brand {
-	       letter-spacing: 6px;
+	      color: #d8ae45;
+	      font-size: 18px;
+	      letter-spacing: 10px;
+	      margin-bottom: 15px;
 	   }
 
-	   .store-links {
-	       grid-template-columns: 1fr;
+	   h1 {
+	      margin: 0;
+	      color: #d8ae45;
+	      font-size: 32px;
+	      font-weight: normal;
+	      letter-spacing: 5px;
 	   }
+
+	   .subtitle {
+	      color: #8d8b85;
+	      font-size: 14px;
+	      letter-spacing: 2px;
+	      margin-top: 8px;
+	   }
+
+
+	   /* === 分隔線 === */
+
+	   .line {
+	      height: 1px;
+	      background: #292927;
+	   }
+
+
+	   /* === 主要區塊 === */
 
 	   .section {
-	       padding: 30px 0;
+	      padding: 40px 0;
+	      border-bottom: 1px solid #292927;
 	   }
 
-	}
+
+	   /* === 標題 === */
+
+	   h2 {
+	      margin: 0 0 18px;
+	      color: #d8ae45;
+	      font-size: 22px;
+	      font-weight: normal;
+	      letter-spacing: 2px;
+	   }
+
+
+	   /* === 說明文字 === */
+
+	   .description {
+	      color: #aaaaaa;
+	      font-size: 16px;
+	      margin-bottom: 24px;
+	   }
+
+
+	   /* === 超商查詢按鈕 === */
+
+	   .store-links {
+	      display: grid;
+	      grid-template-columns: 1fr 1fr;
+	      gap: 20px;
+	   }
+
+	   .store-links a {
+	      display: block;
+	      padding: 20px;
+
+	      text-align: center;
+	      text-decoration: none;
+
+	      color: #d8ae45;
+	      border: 1px solid #d8ae45;
+
+	      transition: 0.25s;
+	   }
+
+	   .store-links a:hover {
+	      background: #d8ae45;
+	      color: #050607;
+	   }
+
+	   .store-name {
+	      font-size: 18px;
+	      letter-spacing: 3px;
+	   }
+
+	   .store-small {
+	      display: block;
+	      margin-top: 3px;
+	      font-size: 15px;
+	      letter-spacing: 2px;
+	      opacity: 0.8;
+	   }
+
+
+	   /* === 查詢前需記下的資訊 === */
+
+	   .info-list {
+	      font-size: 18px;
+	      letter-spacing: 3px;
+	      border-left: 2px solid #514b3c;
+	      padding-left: 20px;
+	      color: #aaa7a0;
+	      margin-bottom: 24px;
+	   }
+
+	   .info-list div {
+	      margin: 8px 0;
+	   }
+
+	   .info-list strong {
+	      color: #d8ae45;
+	      font-weight: normal;
+	   }
+
+
+	   /* === 表單 === */
+
+	   .form-group {
+	      margin-bottom: 25px;
+	   }
+
+	   label {
+	      display: block;
+	      color: #d8ae45;
+	      font-size: 16px;
+	      letter-spacing: 1px;
+	      margin-bottom: 8px;
+	   }
+
+	   input,
+	   select {
+	      width: 100%;
+
+	      background: transparent;
+	      color: #ddd;
+
+	      border: none;
+	      border-bottom: 1px solid #514b3c;
+
+	      padding: 12px 5px;
+
+	      font-size: 16px;
+	      outline: none;
+	      font-family: inherit;
+	   }
+
+
+	   /* === Chrome 自動填寫 === */
+
+	   input:-webkit-autofill,
+	   input:-webkit-autofill:hover,
+	   input:-webkit-autofill:focus,
+	   input:-webkit-autofill:active {
+	      -webkit-box-shadow: 0 0 0 1000px #050607 inset !important;
+	      -webkit-text-fill-color: #ddd !important;
+	      caret-color: #ddd;
+	   }
+
+
+	   /* === Focus === */
+
+	   input:focus,
+	   select:focus {
+	      border-bottom: 1px solid #d8ae45;
+	   }
+
+
+	   /* === 下拉選單 === */
+
+	   select option {
+	      background: #111;
+	      color: #ddd;
+	   }
+
+
+	   /* === Placeholder === */
+
+	   input::placeholder {
+	      color: #555;
+	   }
+
+
+	   /* === 複製按鈕 === */
+
+	   .copy-button {
+	      width: 100%;
+	      margin-top: 15px;
+	      margin-bottom: 15px;
+	      padding: 18px;
+
+	      background: transparent;
+
+	      border: 1px solid #d8ae45;
+	      color: #d8ae45;
+
+	      font-size: 16px;
+	      letter-spacing: 2px;
+
+	      cursor: pointer;
+	      font-family: inherit;
+
+	      transition: 0.25s;
+	   }
+
+	   .copy-button:hover {
+	      background: #d8ae45;
+	      color: #050607;
+	   }
+
+
+	   /* === 底部 === */
+
+	   footer {
+	      text-align: center;
+	      padding: 35px 0 55px;
+
+	      color: #555;
+	      font-size: 12px;
+	      letter-spacing: 2px;
+	   }
+
+
+	   /* === 手機版 === */
+
+	   @media (max-width: 600px) {
+
+	      .container {
+	          width: calc(100% - 30px);
+	      }
+
+	      header {
+	          padding: 40px 0 30px;
+	      }
+
+	      h1 {
+	          font-size: 25px;
+	          letter-spacing: 3px;
+	      }
+
+	      .brand {
+	          letter-spacing: 6px;
+	      }
+
+	      .store-links {
+	          grid-template-columns: 1fr;
+	      }
+
+	      .section {
+	          padding: 30px 0;
+	      }
+
+	   }
 
 	</style>
 </head>
@@ -303,19 +305,29 @@
 	<div class="container">
 		<!-- === 頁首 === -->
 		<header>
-			<div class="brand">
-				<img src="images/logo.png" width="50%" height="50%">
-			</div>
+			<div class="brand"><img height="50%" src="images/logo.png" width="50%"></div>
 			<h1>超商取件資料</h1>
 			<div class="subtitle">
 				這是協助您填寫收件資料的網頁
 			</div>
 		</header>
-		<div class="line"></div><!-- === 查詢門市 === -->
+		<div class="line"></div><!-- === 轉帳資料 === -->
 		<section class="section">
-			<h2>查詢門市</h2>
+			<h2>轉帳資料</h2>
+			<div class="description"></div>
+			<div class="info-list">
+				<div>
+					<strong>700 郵局</strong>
+				</div>
+				<div>
+					<strong>00613870756236</strong>
+				</div>
+			</div>完成轉帳後，請依照下方指引填寫資料。
+		</section><!-- === 查詢門市 === -->
+		<section class="section">
+			<h2>超商取貨門市</h2>
 			<div class="description">
-				請選擇您方便取件的超商， 查詢門市後告知下列資訊。
+				請提供您方便取件的超商門市資訊。
 			</div>
 			<div class="info-list">
 				<div>
@@ -324,11 +336,11 @@
 				<div>
 					<strong>門市店號</strong>
 				</div>
-			</div>
+			</div><span class="store-small">由此查詢門市與店號 →</span>
 			<div class="store-links">
 				<!-- 全家 -->
-				 <a href="https://www.family.com.tw/Marketing/zh/Map" target="_blank"><span class="store-name">全家便利商店</span> <span class="store-small">查詢門市與店號 →</span></a> <!-- 7-ELEVEN -->
-				 <a href="https://emap.pcsc.com.tw/" target="_blank"><span class="store-name">7-ELEVEN</span> <span class="store-small">查詢門市與店號 →</span></a>
+				<a href="https://www.family.com.tw/Marketing/zh/Map" target="_blank"><span class="store-name">全家便利商店</span></a><!-- 7-ELEVEN -->
+				 <a href="https://emap.pcsc.com.tw/" target="_blank"><span class="store-name">7-ELEVEN</span></a>
 			</div>
 		</section><!-- === 填寫資料 === -->
 		<section class="section">
@@ -356,12 +368,15 @@
 				<label>門市店號</label> <input id="storeNumber" placeholder="請輸入門市店號" type="text">
 			</div><!-- 姓名 -->
 			<div class="form-group">
-				<label>收件人姓名（取貨時需出示證件）</label> <input id="name" placeholder="請輸入姓名" type="text">
+				<label>收件人姓名 <span class="subtitle">取貨時需出示證件，請填寫與證件相符的姓名。</span></label> <input id="name" placeholder="請輸入姓名" type="text">
 			</div><!-- 電話 -->
 			<div class="form-group">
 				<label>聯絡電話</label> <input id="phone" placeholder="請輸入電話" type="tel">
+			</div><!-- 帳號末三碼 -->
+			<div class="form-group">
+				<label>帳號末三碼</label> <input id="last3" placeholder="請輸入您的匯款帳號末三碼" type="text">
 			</div><!-- 複製 -->
-			 <button class="copy-button" onclick="copyInfo()">複製資料</button>
+			<button class="copy-button" onclick="copyInfo()">複製資料</button>
 			<div class="description">
 				複製完成記得要傳給我喔。
 			</div>
@@ -372,84 +387,90 @@
 	</div><!-- === JavaScript === -->
 	<script>
 
-	function copyInfo() {
+	   function copyInfo() {
 
 
-	   const name =
-	       document.getElementById("name").value.trim();
+	      const name =
+	          document.getElementById("name").value.trim();
 
 
-	   const phone =
-	       document.getElementById("phone").value.trim();
+	      const phone =
+	          document.getElementById("phone").value.trim();
 
 
-	   const store =
-	       document.getElementById("store").value;
+	      const store =
+	          document.getElementById("store").value;
 
 
-	   const storeName =
-	       document.getElementById("storeName").value.trim();
+	      const storeName =
+	          document.getElementById("storeName").value.trim();
 
 
-	   const storeNumber =
-	       document.getElementById("storeNumber").value.trim();
+	      const storeNumber =
+	          document.getElementById("storeNumber").value.trim();
+
+
+	      const last3 =
+	          document.getElementById("last3").value.trim();
+
+
+	      /* 檢查是否全部填寫 */
+
+	      if (
+	          !name ||
+	          !phone ||
+	          !store ||
+	          !storeName ||
+	          !storeNumber ||
+	          !last3
+	      ) {
+
+	          alert("請先完成所有資料。");
+
+	          return;
+	      }
 
 
 
-	   /* 檢查是否全部填寫 */
+	      /* 要複製的內容 */
 
-	   if (
-	       !name ||
-	       !phone ||
-	       !store ||
-	       !storeName ||
-	       !storeNumber
-	   ) {
+	      const text =
 
-	       alert("請先完成所有資料。");
+	   `姓名：${name}
 
-	       return;
+電話：${phone}
+
+超商：${store}
+
+門市：${storeName}
+
+店號：${storeNumber}
+
+末三碼：${last3}`;
+
+
+
+	      /* 複製資料 */
+
+	      navigator.clipboard.writeText(text)
+
+	      .then(() => {
+
+	          alert(
+	              "資料已複製！\n\n請回到與我的訊息中貼上並傳送即可。"
+	          );
+
+	      })
+
+	      .catch(() => {
+
+	          alert(
+	              "複製失敗，請手動選取資料。"
+	          );
+
+	      });
+
 	   }
-
-
-
-	   /* 要複製的內容 */
-
-	   const text =
-
-	`收件人姓名：${name}
-
-	聯絡電話：${phone}
-
-	超商：${store}
-
-	門市名稱：${storeName}
-
-	門市店號：${storeNumber}`;
-
-
-
-	   /* 複製資料 */
-
-	   navigator.clipboard.writeText(text)
-
-	   .then(() => {
-
-	       alert(
-	           "資料已複製！\n\n請回到與我的訊息中貼上並傳送即可。"
-	       );
-
-	   })
-
-	   .catch(() => {
-
-	       alert(
-	           "複製失敗，請手動選取資料。"
-	       );
-
-	   });
-
-	}
 
 	</script>
 </body>
