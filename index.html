@@ -291,6 +291,14 @@ select {
     font-family: inherit;
 }
 
+input:-webkit-autofill {
+
+    -webkit-box-shadow: 0 0 0 1000px #050607 inset !important;
+
+    -webkit-text-fill-color: #ddd !important;
+
+    caret-color: #ddd;
+}
 
 input:focus,
 select:focus {
@@ -594,37 +602,7 @@ footer {
 
 
 
-    <!-- 姓名 -->
-
-    <div class="form-group">
-
-        <label>
-            收件人姓名
-        </label>
-
-        <input
-        type="text"
-        id="name"
-        placeholder="請輸入姓名">
-
-    </div>
-
-
-
-    <!-- 電話 -->
-
-    <div class="form-group">
-
-        <label>
-            聯絡電話
-        </label>
-
-        <input
-        type="tel"
-        id="phone"
-        placeholder="請輸入電話">
-
-    </div>
+    
 
 
 
@@ -688,7 +666,37 @@ footer {
 
     </div>
 
+    <!-- 姓名 -->
 
+    <div class="form-group">
+
+        <label>
+            收件人姓名 ( 取貨需出示證件 )
+        </label>
+
+        <input
+        type="text"
+        id="name"
+        placeholder="請輸入姓名">
+
+    </div>
+
+
+
+    <!-- 電話 -->
+
+    <div class="form-group">
+
+        <label>
+            聯絡電話
+        </label>
+
+        <input
+        type="tel"
+        id="phone"
+        placeholder="請輸入電話">
+
+    </div>
 
     <!-- 複製 -->
 
